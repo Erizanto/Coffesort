@@ -50,19 +50,3 @@ Aplikasi ini dirancang untuk:
          ↔ ESP32
               ↔ Load Cell + HX711
               ↔ Motor Servo
-
---
-## 📊 Alur Sistem
-
-```plaintext
-Pengguna (Flutter App)
-   ↓
-Gambar biji kopi → Model TFLite → Label hasil
-   ↓
-Kirim hasil ke Firebase
-   ↓
-ESP32 membaca hasil
-   ↓
-Load Cell → Berat → Firebase → Aplikasi
-   ↓
-Servo Motor menyortir otomatis
