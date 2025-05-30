@@ -1,4 +1,3 @@
-# coffeesort
 # Sistem Penyortiran Biji Kopi Otomatis ☕📱⚙️
 
 Aplikasi Flutter yang digunakan untuk menyortir biji kopi secara otomatis berdasarkan kualitas menggunakan deteksi gambar (Machine Learning) dan sistem IoT berbasis ESP32. Proyek ini menggabungkan pengolahan citra, mobile development, dan perangkat keras tertanam untuk menciptakan sistem kontrol kualitas biji kopi yang efisien.
@@ -51,3 +50,19 @@ Aplikasi ini dirancang untuk:
          ↔ ESP32
               ↔ Load Cell + HX711
               ↔ Motor Servo
+
+--
+## 📊 Alur Sistem
+
+```plaintext
+Pengguna (Flutter App)
+   ↓
+Gambar biji kopi → Model TFLite → Label hasil
+   ↓
+Kirim hasil ke Firebase
+   ↓
+ESP32 membaca hasil
+   ↓
+Load Cell → Berat → Firebase → Aplikasi
+   ↓
+Servo Motor menyortir otomatis
